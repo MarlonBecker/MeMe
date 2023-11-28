@@ -1,0 +1,20 @@
+existingFileMode: "error" #truncate/continue/error
+checkpointInterval: 0
+logDir: /data/RL/test/t1
+
+metrics: 
+  - efficiency
+  - reward
+  - revert
+  - action
+  - time
+  - structReg
+  - initialStructure
+  - initialEfficiency
+algorithm:
+  identifier: metropolis
+  structureFilePath: null
+  metropolis_temperature: 0.0001
+  iterations: 100000
+  struct_reg_factor: null 
+  struct_reg_identifier: granularity

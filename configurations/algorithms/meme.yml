@@ -1,0 +1,35 @@
+existingFileMode: "error" #truncate/continue/error
+checkpointInterval: 0
+logDir: data/test
+
+metrics:
+  - efficiency
+  - reward
+  - revert
+  - action
+  - time
+  - structReg
+  - initialStructure
+  - initialEfficiency
+  # - networkOutput
+algorithm:
+  identifier: meme
+  structureFilePath: null
+  structureInitThresholdNet: false
+  sampling_temperature: [const, 0.0001] #scheduler, value
+  metropolis_temperature: [expIncrease, 0.0001, {rate: 0.00001}] #scheduler, value, scheduler_config_dict
+  iterations: 500
+  struct_reg_factor: null
+  struct_reg_identifier: granularity
+  learning_rate: 1
+  loss: result_product
+  result_product_limted_limit: 0.001 #.inf -> unlimited
+  netOutputLimit: 10000 # will be scaled by sampling temperature
+  model:
+    networkInitStructure: null
+    networkInitScale: 0.0001
+    identifier: LocallyConnectedNet
+    initMethod: zeros
+    layers: 10
+    bias: false
+    freezeLC: false

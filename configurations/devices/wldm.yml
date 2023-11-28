@@ -1,0 +1,114 @@
+env_config:
+  environment:
+    designArea:
+    - 100
+    - 100
+    dimensions:
+    - 140
+    - 140
+    - 1
+    inputModes:
+    - modeNum: 0
+      wavelength_index: 0
+      pos:
+      - - 12
+        - 0
+        - 0
+      - - 12
+        - 110
+        - 0
+    - modeNum: 0
+      wavelength_index: 1
+      pos:
+      - - 12
+        - 0
+        - 0
+      - - 12
+        - 110
+        - 0
+    - modeNum: 0
+      wavelength_index: 2
+      pos:
+      - - 12
+        - 0
+        - 0
+      - - 12
+        - 110
+        - 0
+    outputModes:
+    - modeNum: 0
+      pos:
+      - - 128
+        - 0
+        - 0
+      - - 128
+        - 55
+        - 0
+    - modeNum: 0
+      pos:
+      - - 128
+        - 55
+        - 0
+      - - 128
+        - 85
+        - 0
+    - modeNum: 0
+      pos:
+      - - 128
+        - 85
+        - 0
+      - - 128
+        - 140
+        - 0
+    pixelSize: 40
+    pml_thickness:
+      - 10
+      - 10
+      - 0
+    structurePermittivity:
+      - 7.66016329
+      - 7.626103172
+      - 7.592777836
+    structureScalingFactor: 1
+    substratePermittivity:
+      - 2.1025
+      - 2.1025
+      - 2.1025
+    surroundingPermittivity:
+      - 1.0
+      - 1.0
+      - 1.0
+    thickness: 1
+    waveguides:
+    - - !!python/tuple
+        - 0
+        - 64
+      - !!python/tuple
+        - 70.0
+        - 76
+    - - !!python/tuple
+        - 70.0
+        - 34
+      - !!python/tuple
+        - 140
+        - 46
+    - - !!python/tuple
+        - 70.0
+        - 64
+      - !!python/tuple
+        - 140
+        - 76
+    - - !!python/tuple
+        - 70.0
+        - 94
+      - !!python/tuple
+        - 140
+        - 106
+    wavelength:
+      - 1530
+      - 1540
+      - 1550
+    prepare_simBridges: true
+    default_solver: jaxwell-bicgstab
+  figureOfMerit: wl_demultiplexer_3_port_harmonic_overlaps_limited
+  action_type: each_pixel_once
